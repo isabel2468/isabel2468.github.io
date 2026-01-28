@@ -1,38 +1,113 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Analytics Portfolio</title>
-  </head>
+<style>
+  :root{
+    --bg:#ffffff;
+    --card:#ffffff;
+    --text:#111827;
+    --muted:#4b5563;
+    --accent:#1f4e79;          /* dezentes Consulting-Navy */
+    --border: rgba(17,24,39,.12);
+    --shadow: 0 10px 30px rgba(17,24,39,.08);
+  }
 
-  <body>
-    <h1>Analytics & Data Science Portfolio</h1>
+  *{box-sizing:border-box}
 
-    <p>
-      This page showcases selected analytics and machine learning projects
-      with a strong focus on business value and end-to-end implementation.
-    </p>
+  body{
+    margin:0;
+    font-family: "Calibri", Calibri, Arial, system-ui, -apple-system, Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height:1.55;
+  }
 
-    <h2>Projects</h2>
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
 
-    
-    <ul>
-      <li>
-        <strong>Manufacturing Analytics Pipeline</strong><br />
-        Designed to reflect real-world analytics workflows in manufacturing environments
-        <br />
-        <a href="https://isabel2468.github.io/Manufacturing-Analytics-Pipeline/" target="_blank">View project on GitHub</a>
-      </li>
-    </ul>
+  .wrap{max-width:1050px; margin:0 auto; padding:52px 20px 72px}
 
-    
-    <ul>
-      <li>
-        <strong>Customer Attrition Early Warning – Retail Analytics</strong><br />
-        Predictive model to identify customers at risk of becoming inactive
-        and quantify revenue at risk.<br />
-        <a href="https://isabel2468.github.io/Customer-Attrition-Early-Warning/" target="_blank">View project on GitHub</a>
-      </li>
-    </ul>
-  </body>
-</html>
+  header{margin-bottom:26px}
+
+  .title h1{
+    margin:0;
+    font-size:34px;
+    letter-spacing:.2px;
+  }
+
+  .title p{
+    margin:10px 0 0;
+    color:var(--muted);
+    max-width:78ch;
+  }
+
+  .pillbar{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+  .pill{
+    border:1px solid var(--border);
+    background: #f9fafb;
+    padding:6px 10px;
+    border-radius:999px;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px; margin-top:18px}
+
+  .card{
+    grid-column: span 6;
+    background: var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px 18px 16px;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{
+    transform: translateY(-2px);
+    border-color: rgba(31,78,121,.28);
+    box-shadow: 0 14px 40px rgba(17,24,39,.12);
+  }
+
+  .card h3{margin:0; font-size:18px}
+  .card p{margin:10px 0 14px; color:var(--muted)}
+
+  .meta{display:flex; gap:10px; flex-wrap:wrap; margin:0 0 14px}
+  .tag{
+    font-size:12px;
+    color:var(--muted);
+    border:1px solid var(--border);
+    background:#f9fafb;
+    padding:5px 9px;
+    border-radius:999px;
+  }
+
+  .actions{display:flex; gap:12px; flex-wrap:wrap}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:9px 12px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    background: var(--accent);
+    color: #ffffff;
+    font-weight:600;
+    font-size:13px;
+  }
+  .btn:hover{text-decoration:none; filter:brightness(0.98)}
+  .btn.secondary{
+    background: transparent;
+    color: var(--accent);
+  }
+
+  .two{grid-column: span 12; display:grid; grid-template-columns: 1.2fr .8fr; gap:16px}
+  .panel{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px;
+    box-shadow: var(--shadow);
+  }
+
+  .footer{margin-top:42px; color:var(--muted); font-size:13px}
+
+  @media (max-width: 900px){
+    .card{grid-column: span 12}
+    .two{grid-template-columns: 1fr}
+  }
+</style>
