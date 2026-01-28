@@ -1,4 +1,9 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics Portfolio</title>
 <style>
   :root{
     --bg:#ffffff;
@@ -14,7 +19,7 @@
 
   body{
     margin:0;
-    font-family: "Calibri", Calibri, Arial, system-ui, -apple-system, Roboto, sans-serif;
+    font-family: "Segoe UI", Calibri, Arial, system-ui, -apple-system, Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height:1.55;
@@ -113,34 +118,100 @@
   }
 </style>
 
+</head>
 
-<header>
-  <div class="title">
-    <h1>Isabel Hofmann</h1>
-    <p style="margin:6px 0 0; color:var(--muted); font-weight:600;">
-      Analytics • SQL • Python • Power BI
-    </p>
+<body>
+  <div class="wrap">
+     <header>
+    <div class="title">
+      <h1>Isabel Hofmann</h1>
+      <p style="margin:6px 0 0; color:var(--muted); font-weight:600;">
+        Analytics • SQL • Python • Power BI
+      </p>
+  
+      <p>
+        End-to-end analytics and machine learning projects with a strong focus on business value:
+        data modeling in PostgreSQL, feature engineering in SQL, explainable ML in Python, and executive dashboards in Power BI.
+      </p>
+  
+      <div class="pillbar">
+        <span class="pill">PostgreSQL</span>
+        <span class="pill">SQL</span>
+        <span class="pill">Python</span>
+        <span class="pill">Power BI</span>
+        <span class="pill">ML • scikit-learn</span>
+      </div>
+  
+      <p style="margin:14px 0 0; color:var(--muted);">
+        <a href="PASTE_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+        &nbsp;•&nbsp;
+        <a href="mailto:PASTE_EMAIL">Email</a>
+        &nbsp;•&nbsp;
+        <a href="PASTE_GITHUB_PROFILE" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </div>
+  </header>
 
-    <p>
-      End-to-end analytics and machine learning projects with a strong focus on business value:
-      data modeling in PostgreSQL, feature engineering in SQL, explainable ML in Python, and executive dashboards in Power BI.
-    </p>
 
-    <div class="pillbar">
-      <span class="pill">PostgreSQL</span>
-      <span class="pill">SQL</span>
-      <span class="pill">Python</span>
-      <span class="pill">Power BI</span>
-      <span class="pill">ML • scikit-learn</span>
+    <div class="grid">
+      <div class="card">
+        <h3>Customer Attrition Early Warning – Retail Analytics</h3>
+        <div class="meta">
+          <span class="tag">ML • Logistic Regression</span>
+          <span class="tag">SQL Feature Engineering</span>
+          <span class="tag">Power BI Dashboard</span>
+        </div>
+        <p>
+          Early-warning system predicting customer inactivity (next 90 days) and quantifying revenue at risk.
+          End-to-end pipeline: staging → raw → core in PostgreSQL, scoring in Python, executive dashboard in Power BI.
+        </p>
+        <div class="actions">
+          <a class="btn" href="PASTE_GITHUB_REPO_LINK_1" target="_blank" rel="noreferrer">View GitHub Repo</a>
+          <a class="btn secondary" href="PASTE_PROJECT_README_LINK_1" target="_blank" rel="noreferrer">Open README</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Manufacturing Analytics Pipeline</h3>
+        <div class="meta">
+          <span class="tag">Star Schema</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Power BI KPI Dashboard</span>
+        </div>
+        <p>
+          End-to-end analytics pipeline from raw ingestion to a star schema and executive KPIs.
+          Demonstrates data modeling, transformation logic, and dashboard storytelling for a manufacturing context.
+        </p>
+        <div class="actions">
+          <a class="btn" href="PASTE_GITHUB_REPO_LINK_2" target="_blank" rel="noreferrer">View GitHub Repo</a>
+          <a class="btn secondary" href="PASTE_PROJECT_README_LINK_2" target="_blank" rel="noreferrer">Open README</a>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="panel">
+          <h3 style="margin:0 0 8px;">What I focus on</h3>
+          <p style="margin:0; color:var(--muted)">
+            Business-first analytics, clean data modeling, reproducible pipelines, and dashboards that drive decisions.
+            I prefer explainable ML and pragmatic engineering over “black-box” complexity.
+          </p>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 8px;">Contact</h3>
+          <p style="margin:0; color:var(--muted)">
+            Add your LinkedIn / email here.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <p style="margin:14px 0 0; color:var(--muted);">
-      <a href="PASTE_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
-      &nbsp;•&nbsp;
-      <a href="mailto:PASTE_EMAIL">Email</a>
-      &nbsp;•&nbsp;
-      <a href="PASTE_GITHUB_PROFILE" target="_blank" rel="noreferrer">GitHub</a>
-    </p>
+    <div class="footer">
+      © <span id="y"></span> • Built with GitHub Pages
+    </div>
   </div>
-</header>
 
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
